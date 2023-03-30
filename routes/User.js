@@ -34,6 +34,16 @@ router.get("/login", async(req, res)=>{
         
     }
 })
+router.get("/users", async(req, res)=>{
+    try{
+        const user = await User.find({ nome: req.headers.nome});
+        const nunberUsers = user.length;
+        return res.status(200).json(nunberUsers);
+    }catch(err){
+        return res.status(404).json(err);
+        
+    }
+})
 router.post("/", async(req, res)=>{
     try {
         const body = new User({
