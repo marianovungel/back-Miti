@@ -76,7 +76,7 @@ router.put("/:id", async(req, res)=>{
             const hashedPass = await bcrypt.hash(req.body.senha, salt)
             use.senha = hashedPass;
         }
-        const data = await User.findByIdAndUpdate(req.params.id, use)
+        const data = await User.findByIdAndUpdate(req.params.id, use, {new:true})
         res.status(200).json(data)
     } catch (error) {
         res.status(404).json(error)
