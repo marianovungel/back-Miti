@@ -3,9 +3,9 @@ const Pergunta = require('../models/Perguntas')
 const router = express.Router()
 
 
-router.get("/", async(req, res)=>{
+router.get("/:id", async(req, res)=>{
     try {
-        const data = await Pergunta.find()
+        const data = await Pergunta.find({lang: req.params.id})
         res.status(200).json(data)
     } catch (error) {
         res.status(404).json(error)
