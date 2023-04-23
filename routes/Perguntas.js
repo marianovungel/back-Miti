@@ -1,8 +1,17 @@
 const express = require('express')
 const Pergunta = require('../models/Perguntas')
 const router = express.Router()
+const fasec = require('../fasec').userget
 
-
+router.get("/newc", async(req, res)=>{
+    try {
+        const data = await fasec()
+        res.status(200).json(data.data)
+    } catch (error) {
+        res.status(404).json(error)
+        
+    }
+})
 router.get("/:id", async(req, res)=>{
     try {
         const data = await Pergunta.find({lang: req.params.id})
