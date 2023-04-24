@@ -173,15 +173,108 @@ const data = [
     },
     {
       id: 11,
-      question: "Compare corretamente os seguintes valores 20 e 21 seguindo o formato X comparador Y",
+      question: "Compare corretamente os seguintes valores 270 e 21 seguindo o formato X comparador Y",
       tipo: "input",
       resposta: [
         {
-          text: "20<21",
+          text: "270>21",
           correct: true,
         },
       ],
     },
+    {
+        id: 12,
+        question: "",
+        tipo: "img",
+        url: "./fasejava4.png",
+        resposta: [
+          {
+            text: "",
+            correct: true,
+          },
+        ],
+      },
+      {
+        id: 13,
+        question: "Qual a estrutura usar quando se pretende testar uma condição e executar um código caso seja verdade e outro se for mentira?",
+        tipo: "button",
+        resposta: [
+          {
+            text: "&&",
+            correct: false,
+          },
+          {
+            text: "if",
+            correct: false,
+          },
+          {
+            text: "if-else",
+            correct: true,
+          },
+          {
+            text: "and",
+            correct: false,
+          },
+        ],
+      },
+      {
+        id: 14,
+        question: "",
+        tipo: "img",
+        url: "./fasejava6.png",
+        resposta: [
+          {
+            text: "",
+            correct: true,
+          },
+        ],
+      },
+      {
+        id: 13,
+        question: "Quais os tipos de estruturas de repetição estudamos ?",
+        tipo: "button",
+        resposta: [
+          {
+            text: "for while e do-while",
+            correct: true,
+          },
+          {
+            text: "if e for",
+            correct: false,
+          },
+          {
+            text: "if-else",
+            correct: false,
+          },
+          {
+            text: "while and",
+            correct: false,
+          },
+        ],
+      },
+      {
+        id: 18,
+        question: "",
+        tipo: "img",
+        url: "./fasejava6.png",
+        resposta: [
+          {
+            text: "",
+            correct: true,
+          },
+        ],
+      },
+      {
+        id: 21,
+        question: "Declare um vector com o nome Aluno do tipo inteiro e com o valor 1",
+        tipo: "input",
+        resposta: [
+          {
+            text: "intAluno=1;",
+            correct: true,
+          },
+        ],
+      },
 ]
 
 module.exports = {

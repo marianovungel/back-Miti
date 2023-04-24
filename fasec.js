@@ -193,10 +193,89 @@ const data = [
         },
       ],
     },
+    {
+      id: 12,
+      question: "",
+      tipo: "img",
+      url: "./fase2.png",
+      resposta: [
+        {
+          text: "",
+          correct: true,
+        },
+      ],
+    },
+    {
+      id: 13,
+      question: "Qual a estrutura usar quando se pretende testar uma condição e executar um código caso seja verdade e outro se for mentira?",
+      tipo: "button",
+      resposta: [
+        {
+          text: "&&",
+          correct: false,
+        },
+        {
+          text: "if",
+          correct: false,
+        },
+        {
+          text: "if-else",
+          correct: true,
+        },
+        {
+          text: "and",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 15,
+      question: "Quais os tipos de estruturas de repetição estudamos ?",
+      tipo: "button",
+      resposta: [
+        {
+          text: "for while e do-while",
+          correct: true,
+        },
+        {
+          text: "if e for",
+          correct: false,
+        },
+        {
+          text: "if-else",
+          correct: false,
+        },
+        {
+          text: "while and",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 18,
+      question: "",
+      tipo: "img",
+      url: "./fase6.png",
+      resposta: [
+        {
+          text: "",
+          correct: true,
+        },
+      ],
+    },
+    {
+      id: 21,
+      question: "Declare um vector com o nome Aluno do tipo inteiro e com o valor 1",
+      tipo: "input",
+      resposta: [
+        {
+          text: "intAluno=1;",
+          correct: true,
+        },
+      ],
+    },
 ]
-const faseData = ()=>{
-    return data;
-}
+
 module.exports = {
     userget: async()=>{
         return { error: false, data:data};
