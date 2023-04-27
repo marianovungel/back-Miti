@@ -58,11 +58,11 @@ const data = [
     },
     {
       id: 4,
-      question: "Declare uma variável do tipo realC, com o nome Aluno e com valor 100.20",
+      question: "Declare uma variável do tipo realC, com o nome Aluno e com valor 1.2",
       tipo: "input",
       resposta: [
         {
-          text: "floatAluno=100.20;",
+          text: "floatAluno=1.2;",
           correct: true,
         },
       ],
@@ -94,34 +94,11 @@ const data = [
       id: 6,
       question: "",
       tipo: "img",
-      url: "./fase2.png",
+      url: "./c2.png",
       resposta: [
         {
           text: "",
           correct: true,
-        },
-      ],
-    },
-    {
-      id: 7,
-      question: "Quais os tipos de operadores o artigo anterior realçou?",
-      tipo: "button",
-      resposta: [
-        {
-          text: "Lógica, Comparação e  Atribuição",
-          correct: true,
-        },
-        {
-          text: "Lógica, Geométrico e  Atribuição",
-          correct: false,
-        },
-        {
-          text: "Analítico, Geométrico e  Atribuição",
-          correct: false,
-        },
-        {
-          text: "Analítico, Geométrico e  Aleatório",
-          correct: false,
         },
       ],
     },
@@ -184,11 +161,12 @@ const data = [
     },
     {
       id: 11,
-      question: "Compare corretamente os seguintes valores 20 e 21 seguindo o formato X comparador Y",
-      tipo: "input",
+      question: "Utiliza o operador aritmético + para somar dois inteiros e resultar em 200?",
+      tipo: "operador",
       resposta: [
         {
-          text: "20<21",
+          text: 200,
+          op: "+",
           correct: true,
         },
       ],
@@ -197,7 +175,65 @@ const data = [
       id: 12,
       question: "",
       tipo: "img",
-      url: "./fase2.png",
+      url: "./fase3.png",
+      resposta: [
+        {
+          text: "",
+          correct: true,
+        },
+      ],
+    },
+    {
+      id: 29,
+      question: "Qual trecho de código está corretamente usando o printf?",
+      tipo: "button",
+      resposta: [
+        {
+          text: "printf(“ Olá Mundo! ”);",
+          correct: true,
+        },
+        {
+          text: "printf(-Olá Mundo!-);",
+          correct: false,
+        },
+        {
+          text: "printf((“ Olá Mundo! ”));",
+          correct: false,
+        },
+        {
+          text: "printf(-(“ Olá Mundo! ”)-);",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 740,
+      question: "Qual trecho de código está corretamente usando o scanf?",
+      tipo: "button",
+      resposta: [
+        {
+          text: "scanf(Olá Mundo!);",
+          correct: false,
+        },
+        {
+          text: "scanf-Olá Mundo!-",
+          correct: false,
+        },
+        {
+          text: "scanf(“%d”, &nome);",
+          correct: true,
+        },
+        {
+          text: "scanf(Olá Mundo!);",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 32,
+      question: "",
+      tipo: "img",
+      url: "./c4.png",
       resposta: [
         {
           text: "",
@@ -207,11 +243,49 @@ const data = [
     },
     {
       id: 13,
-      question: "Qual a estrutura usar quando se pretende testar uma condição e executar um código caso seja verdade e outro se for mentira?",
+      question: "Qual função serve para executar um bloco de código se a condição for verdadeira?",
       tipo: "button",
       resposta: [
         {
-          text: "&&",
+          text: "printf",
+          correct: false,
+        },
+        {
+          text: "if else",
+          correct: false,
+        },
+        {
+          text: "if",
+          correct: true,
+        },
+        {
+          text: "else",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 15777,
+      question: "Utiliza a condição if para testar dois valores e saber se 20 é maior que 18. Se a condição for verdadeira imprima o texto... printf(“ 20 é maior que 18 “);",
+      tipo: "input",
+      resposta: [
+        {
+          text: `if(20>18){printf("20émaiorque18");}`,
+          correct: true,
+        },
+      ],
+    },
+    {
+      id: 13,
+      question: "Qual função serve para executar um bloco de código se a condição for falso?",
+      tipo: "button",
+      resposta: [
+        {
+          text: "printf",
+          correct: false,
+        },
+        {
+          text: "if else",
           correct: false,
         },
         {
@@ -219,35 +293,19 @@ const data = [
           correct: false,
         },
         {
-          text: "if-else",
+          text: "else",
           correct: true,
-        },
-        {
-          text: "and",
-          correct: false,
         },
       ],
     },
     {
-      id: 15,
-      question: "Quais os tipos de estruturas de repetição estudamos ?",
-      tipo: "button",
+      id: 17755,
+      question: "Utiliza a condição if-else para testar dois valores if(18>20) e saber se 18 é menor que 20. Se a condição for verdadeira imprima o texto {printf(“ 20 é maior que 18“); se for falso imprima o texto printf(“ 18 é menor que 20“);",
+      tipo: "input",
       resposta: [
         {
-          text: "for while e do-while",
+          text: `if(18>20){printf("20émaiorque18");}else{printf("18émenorque20");}`,
           correct: true,
-        },
-        {
-          text: "if e for",
-          correct: false,
-        },
-        {
-          text: "if-else",
-          correct: false,
-        },
-        {
-          text: "while and",
-          correct: false,
         },
       ],
     },
@@ -255,7 +313,7 @@ const data = [
       id: 18,
       question: "",
       tipo: "img",
-      url: "./fase6.png",
+      url: "./c5.png",
       resposta: [
         {
           text: "",
@@ -264,13 +322,208 @@ const data = [
       ],
     },
     {
+      id: 111,
+      question: "Qual delas é uma instrução de repetição?",
+      tipo: "button",
+      resposta: [
+        {
+          text: "while",
+          correct: true,
+        },
+        {
+          text: "if",
+          correct: false,
+        },
+        {
+          text: "print",
+          correct: false,
+        },
+        {
+          text: "else",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 112,
+      question: "Qual delas é a melhor instrução de repetição para se usar quando se conhece o número de vezes para executar o código de bloco?",
+      tipo: "button",
+      resposta: [
+        {
+          text: "while",
+          correct: false,
+        },
+        {
+          text: "for",
+          correct: true,
+        },
+        {
+          text: "else",
+          correct: false,
+        },
+        {
+          text: "do/while",
+          correct: false,
+        },
+      ],
+    },
+    {
       id: 21,
-      question: "Declare um vector com o nome Aluno do tipo inteiro e com o valor 1",
+      question: "Utiliza o ciclo de repetição for, para imprimir “sim” 5 vezes.",
       tipo: "input",
       resposta: [
         {
-          text: "intAluno=1;",
+          text: `for(inti==;i<5;i++){Printf("Sim");}`,
           correct: true,
+        },
+      ],
+    },
+    {
+      id: 112,
+      question: "Qual delas é uma instrução de repetição?",
+      tipo: "button",
+      resposta: [
+        {
+          text: "do/while",
+          correct: true,
+        },
+        {
+          text: "if",
+          correct: false,
+        },
+        {
+          text: "else",
+          correct: false,
+        },
+        {
+          text: "print",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 181,
+      question: "",
+      tipo: "img",
+      url: "./c6.png",
+      resposta: [
+        {
+          text: "",
+          correct: true,
+        },
+      ],
+    },
+    {
+      id: 113,
+      question: "Complete a seguinte frase, Array é usado para armazenar vários valores em uma única ------ ",
+      tipo: "button",
+      resposta: [
+        {
+          text: "for",
+          correct: false,
+        },
+        {
+          text: "variável",
+          correct: true,
+        },
+        {
+          text: "printf",
+          correct: false,
+        },
+        {
+          text: "else",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 113,
+      question: "Qual deles esta declarado corretamente usando array de 1 dimensão?",
+      tipo: "button",
+      resposta: [
+        {
+          text: "int [] A;",
+          correct: false,
+        },
+        {
+          text: "int B = [6];",
+          correct: false,
+        },
+        {
+          text: "int C = [2,4,6];",
+          correct: false,
+        },
+        {
+          text: "int A[] = { 6 };",
+          correct: true,
+        },
+      ],
+    },
+    {
+      id: 121,
+      question: "Declare um Array do tipo inteiro com o nome Aluno de tamanho 1 (Expecifique o tamanho) e com o valor 6.",
+      tipo: "input",
+      resposta: [
+        {
+          text: "intAluno[1]={6};",
+          correct: true,
+        },
+      ],
+    },
+    {
+      id: 113,
+      question: "Qual deles esta declarado corretamente usando array de 2 dimensões?",
+      tipo: "button",
+      resposta: [
+        {
+          text: "int [] A;",
+          correct: false,
+        },
+        {
+          text: "int B[] = { 6, 4 };",
+          correct: true,
+        },
+        {
+          text: "int C = [ 2, 4, 6 ];",
+          correct: false,
+        },
+        {
+          text: "int A = { 6 };",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 123,
+      question: "Declare um Array do tipo inteiro com o nome Aluno de tamanho 2 (Expecifique o tamanho) e com o valor 2 e 4.",
+      tipo: "input",
+      resposta: [
+        {
+          text: "intAluno[2]={2,4};",
+          correct: true,
+        },
+      ],
+    },
+    {
+      id: 113,
+      question: "Qual deles esta declarado corretamente usando array de 3 dimensões?",
+      tipo: "button",
+      resposta: [
+        {
+          text: "int [] A;",
+          correct: false,
+        },
+        {
+          text: "int B[] = { 6, 4 };",
+          correct: false,
+        },
+        {
+          text: "int C[] = { 2, 4, 6 };",
+          correct: true,
+        },
+        {
+          text: "int A = { 6 };",
+          correct: false,
         },
       ],
     },
