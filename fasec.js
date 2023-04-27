@@ -300,7 +300,7 @@ const data = [
     },
     {
       id: 17755,
-      question: "Utiliza a condição if-else para testar dois valores if(18>20) e saber se 18 é menor que 20. Se a condição for verdadeira imprima o texto {printf(“ 20 é maior que 18“); se for falso imprima o texto printf(“ 18 é menor que 20“);",
+      question: `Utiliza a condição if-else para testar dois valores if(18>20) e saber se 18 é menor que 20. Se a condição for verdadeira imprima o texto printf(" 20 é maior que 18 "); se for falso imprima o texto printf(" 18 é menor que 20");`,
       tipo: "input",
       resposta: [
         {
