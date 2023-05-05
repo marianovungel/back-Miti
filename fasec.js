@@ -1,11 +1,11 @@
 const data = [
     {
       id: 1,
-      question: "O que é uma Linguagem de Programação?",
+      question: "O que é a linguagem C?",
       tipo: "button",
       resposta: [
         {
-          text: "Linguagem de Computador",
+          text: "Linguagem de baixo nível",
           correct: false,
         },
         {
@@ -13,7 +13,7 @@ const data = [
           correct: false,
         },
         {
-          text: "Linguagem Animal",
+          text: "Linguagem de Máquina",
           correct: false,
         },
         {
@@ -94,7 +94,7 @@ const data = [
       id: 6,
       question: "",
       tipo: "img",
-      url: "./c2.png",
+      url: "./cc2.png",
       resposta: [
         {
           text: "",
@@ -104,34 +104,35 @@ const data = [
     },
     {
       id: 8,
-      question: "Consideremos que X = 5, se em seguida fazermos X++, quanto valerá o X?",
+      question: "Quais foram os tipos de operadores que estudamos no texto anterior?",
       tipo: "button",
       resposta: [
         {
-          text: "X = 25;",
+          text: "Analítico, Atribuição e Geométrico",
           correct: false,
         },
         {
-          text: "X = 10;",
+          text: "Lógico, Geométrico e Atribuição",
           correct: false,
         },
         {
-          text: "X = 6;",
+          text: "Aritmético, Atribuição, Comparação e Lógico",
           correct: true,
         },
         {
-          text: "X = 50;",
+          text: "Aleatório, Aritmético e Comparação",
           correct: false,
         },
       ],
     },
     {
       id: 9,
-      question: "Qual resultado será de X será obtida Pelo seguinte código: X = 9 % 2;",
-      tipo: "input",
+      question: "Utiliza o operador aritmético * para multiplicar dois inteiros e resultar em 100?",
+      tipo: "operador",
       resposta: [
         {
-          text: "1",
+          text: 100,
+          op: "*",
           correct: true,
         },
       ],
@@ -233,7 +234,7 @@ const data = [
       id: 32,
       question: "",
       tipo: "img",
-      url: "./c4.png",
+      url: "./cc4.png",
       resposta: [
         {
           text: "",
@@ -243,7 +244,7 @@ const data = [
     },
     {
       id: 13,
-      question: "Qual função serve para executar um bloco de código se a condição for verdadeira?",
+      question: "Qual comando serve para executar um bloco de código se a condição for verdadeira?",
       tipo: "button",
       resposta: [
         {
@@ -266,18 +267,22 @@ const data = [
     },
     {
       id: 15777,
-      question: "Utiliza a condição if para testar dois valores e saber se 20 é maior que 18. Se a condição for verdadeira imprima o texto... printf(“ 20 é maior que 18 “);",
-      tipo: "input",
+      question: "Complete a condição if para testar dois valores e saber se 20 é maior que 18. Se a condição for verdadeira imprima o texto... (“20 é maior que 18“)",
+      tipo: "if",
       resposta: [
         {
-          text: `if(20>18){printf("20émaiorque18");}`,
+          text1: `if`,
+          text2: `printf`,
+          p1: `(20>18) {`,
+          p2: `(“20 é maior que 18 “);`,
+          p3: `}`,
           correct: true,
         },
       ],
     },
     {
       id: 13,
-      question: "Qual função serve para executar um bloco de código se a condição for falso?",
+      question: "Qual comando serve para executar um bloco de código se a condição for falsa?",
       tipo: "button",
       resposta: [
         {
@@ -300,11 +305,18 @@ const data = [
     },
     {
       id: 17755,
-      question: `Utiliza a condição if-else para testar dois valores if(18>20) e saber se 18 é menor que 20. Se a condição for verdadeira imprima o texto printf(" 20 é maior que 18 "); se for falso imprima o texto printf(" 18 é menor que 20");`,
-      tipo: "input",
+      question: `Complete a condição if-else para testar dois valores e saber se 18 é menor que 20. Se a condição for verdadeira imprima o texto... (“18 é menor que 20 “);`,
+      tipo: "ifelse",
       resposta: [
         {
-          text: `if(18>20){printf("20émaiorque18");}else{printf("18émenorque20");}`,
+          text1: `if`,
+          text2: `printf`,
+          text3: `printf`,
+          p1: `(18>20) {`,
+          p2: `(“20 é maior que 18 “);`,
+          p3: `} else {`,
+          p4: `(“18 é menor que 20”);`,
+          p5: `}`,
           correct: true,
         },
       ],
@@ -313,7 +325,7 @@ const data = [
       id: 18,
       question: "",
       tipo: "img",
-      url: "./c5.png",
+      url: "./cc5.png",
       resposta: [
         {
           text: "",
@@ -323,7 +335,7 @@ const data = [
     },
     {
       id: 111,
-      question: "Qual delas é uma instrução de repetição?",
+      question: "Qual deles é uma instrução de repetição?",
       tipo: "button",
       resposta: [
         {
@@ -346,7 +358,7 @@ const data = [
     },
     {
       id: 112,
-      question: "Qual delas é a melhor instrução de repetição para se usar quando se conhece o número de vezes para executar o código de bloco?",
+      question: "Qual deles é a melhor instrução de repetição para se usar quando se conhece o número de vezes para executar o código de bloco?",
       tipo: "button",
       resposta: [
         {
@@ -370,17 +382,21 @@ const data = [
     {
       id: 21,
       question: "Utiliza o ciclo de repetição for, para imprimir “sim” 5 vezes.",
-      tipo: "input",
+      tipo: "if",
       resposta: [
         {
-          text: `for(inti==;i<5;i++){Printf("Sim");}`,
+          text1: `for`,
+          text2: `printf`,
+          p1: `(int i = 1 ; i <=5; i++) {`,
+          p2: `("Sim");`,
+          p3: `}`,
           correct: true,
         },
       ],
     },
     {
       id: 112,
-      question: "Qual delas é uma instrução de repetição?",
+      question: "Qual deles é uma instrução de repetição?",
       tipo: "button",
       resposta: [
         {
@@ -405,7 +421,7 @@ const data = [
       id: 181,
       question: "",
       tipo: "img",
-      url: "./c6.png",
+      url: "./cc6.png",
       resposta: [
         {
           text: "",
@@ -415,7 +431,7 @@ const data = [
     },
     {
       id: 113,
-      question: "Complete a seguinte frase, Array é usado para armazenar vários valores em uma única ------ ",
+      question: "Complete a seguinte frase, Array é usado para armazenar vários valores em uma única ------ ? ",
       tipo: "button",
       resposta: [
         {
