@@ -3,6 +3,7 @@ const Pergunta = require('../models/Perguntas')
 const router = express.Router()
 const fasec = require('../fasec').userget
 const fasejv = require('../fasejava').userget
+const fasepy = require('../fasepy').userget
 
 router.get("/newc", async(req, res)=>{
     try {
@@ -16,6 +17,15 @@ router.get("/newc", async(req, res)=>{
 router.get("/newjava", async(req, res)=>{
     try {
         const data = await fasejv()
+        res.status(200).json(data.data)
+    } catch (error) {
+        res.status(404).json(error)
+        
+    }
+})
+router.get("/newpy", async(req, res)=>{
+    try {
+        const data = await fasepy()
         res.status(200).json(data.data)
     } catch (error) {
         res.status(404).json(error)
