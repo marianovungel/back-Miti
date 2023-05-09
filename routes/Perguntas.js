@@ -4,6 +4,7 @@ const router = express.Router()
 const fasec = require('../fasec').userget
 const fasejv = require('../fasejava').userget
 const fasepy = require('../fasepy').userget
+const fasejs = require('../fasejs').userget
 
 router.get("/newc", async(req, res)=>{
     try {
@@ -26,6 +27,15 @@ router.get("/newjava", async(req, res)=>{
 router.get("/newpy", async(req, res)=>{
     try {
         const data = await fasepy()
+        res.status(200).json(data.data)
+    } catch (error) {
+        res.status(404).json(error)
+        
+    }
+})
+router.get("/newjs", async(req, res)=>{
+    try {
+        const data = await fasejs()
         res.status(200).json(data.data)
     } catch (error) {
         res.status(404).json(error)
