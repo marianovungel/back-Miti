@@ -180,7 +180,7 @@ const data = [
       tipo: "operador",
       resposta: [
         {
-          text: 50,
+          text: 60,
           op: "+",
           correct: true,
         }
@@ -204,7 +204,7 @@ const data = [
         tipo: "button",
         resposta: [
           {
-            text: `R:console.log (“ Sim “);`,
+            text: `console.log (“ Sim “);`,
             correct: true,
           },
           {
