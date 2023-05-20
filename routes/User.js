@@ -12,6 +12,22 @@ router.get("/", async(req, res)=>{
         res.status(404).json(error)
     }
 })
+router.get("/find", async(req, res)=>{
+    try {
+        const data = await User.find({adm: true})
+        res.status(200).json(data)
+    } catch (error) {
+        res.status(404).json(error)
+    }
+})
+router.get("/adm/:id", async(req, res)=>{
+    try {
+        const data = await User.findById(req.params.id)
+        res.status(200).json(data)
+    } catch (error) {
+        res.status(404).json(error)
+    }
+})
 router.get("/login", async(req, res)=>{
     try{
         const user = await User.find({ nome: req.headers.nome});
@@ -48,6 +64,30 @@ router.post("/", async(req, res)=>{
     try {
         const body = new User({
             nome: req.body.nome,
+            adm: false,
+            pontoC: 0,
+            pontoJava: 0,
+            pontoJS: 0,
+            pontoPY: 0
+        })
+
+        if(req.body.senha){
+            //usando bcrypt para incriptar a senha
+            const salt = await bcrypt.genSalt(10);
+            const hashedPass = await bcrypt.hash(req.body.senha, salt)
+            body.senha = hashedPass;
+        }
+        const newPergunta = await body.save()
+        res.status(200).json(newPergunta)
+    } catch (error) {
+        res.status(404).json(error)
+    }
+})
+router.post("/adm", async(req, res)=>{
+    try {
+        const body = new User({
+            nome: req.body.nome,
+            adm: true,
             pontoC: 0,
             pontoJava: 0,
             pontoJS: 0,
