@@ -90,6 +90,46 @@ router.post("/newc/:id", async(req, res)=>{
         
     }
 })
+router.post("/cmult", async(req, res)=>{
+    try {
+        const body = new C(req.body)
+        const newPergunta = await body.save()
+        res.status(200).json(newPergunta)
+    } catch (error) {
+        res.status(404).json(error)
+        
+    }
+})
+router.post("/jvmult", async(req, res)=>{
+    try {
+        const body = new Java(req.body)
+        const newPergunta = await body.save()
+        res.status(200).json(newPergunta)
+    } catch (error) {
+        res.status(404).json(error)
+        
+    }
+})
+router.post("/pymult", async(req, res)=>{
+    try {
+        const body = new Python(req.body)
+        const newPergunta = await body.save()
+        res.status(200).json(newPergunta)
+    } catch (error) {
+        res.status(404).json(error)
+        
+    }
+})
+router.post("/jsmult", async(req, res)=>{
+    try {
+        const body = new Javascript(req.body)
+        const newPergunta = await body.save()
+        res.status(200).json(newPergunta)
+    } catch (error) {
+        res.status(404).json(error)
+        
+    }
+})
 router.get("/:id", async(req, res)=>{
     try {
         const data = await Pergunta.find({lang: req.params.id})
