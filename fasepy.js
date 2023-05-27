@@ -35,7 +35,7 @@ const data = [
       },
       {
         id: 540,
-        question: "O Python é uma linguagem de tipagem ?",
+        question: "Qual dos trechos de código a baixo é uma lista?",
         tipo: "button",
         resposta: [
           {
