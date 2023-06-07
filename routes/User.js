@@ -42,7 +42,7 @@ router.get("/login", async(req, res)=>{
             }
         }
         
-        const {senha, ...others} = user[0]._doc;
+        const {senha, adm, ...others} = user[0]._doc;
         res.status(200).json(others);
 
     }catch(err){
